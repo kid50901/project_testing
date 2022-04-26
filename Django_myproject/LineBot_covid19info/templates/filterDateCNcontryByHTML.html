@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title> filterDateCNcontry </title>
+    </head>
+    <body>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="date_CNcountry_template">請入指令含日期與國家</label>
+            <input id="date_CNcountry_template" type="text" name="date_CNcountry_template">
+            <input type="submit" value="送出">
+            <span style="color:red">{{message}}</span>
+        </form>
+        <div>{{responseCaseToTemplates}}</div>
+    </body>
+</html>

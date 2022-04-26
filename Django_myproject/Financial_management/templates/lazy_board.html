@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9" >
+            <div class="card " >
+                <div class="card-header">
+                    Endmeets
+                </div>
+                <div class="card-body" id="endmeets" style="width: 800px;height:300px;" >
+                    <script src="{% static 'lazy_board_endmeets.js' %}"></script>
+                </div>
+            </div>
+        </div>
+
+       <div class="col-lg-3"  >
+                <div class="card " >
+                    <div class="card-header">
+                        Indicator
+                    </div>
+                    <div class="row">
+                        <div class="card-body" id="indicator" >
+                            <script src="{% static 'lazy_board_indicator.js' %}"></script>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="row">
+                        <div class="card-body" id="indicator1" >
+                            <script src="{% static 'lazy_board_indicator.js' %}"></script>
+                        </div>
+                    </div>
+                </div>
+       </div>      
+    </div>
+    <div class="row">
+        <div class="col-lg-7" ><p></p></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7" >
+            <div class="card ">
+                <div class="card-header">
+                    Assets
+                </div>
+                <div class="card-body" id="assets" style="width: 600px;height:300px;">
+                    <script src="{% static 'lazy_board_assets.js' %}"></script>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5" >
+            <div class="card ">
+                <div class="card-header">
+                    Assets
+                </div>
+                <div class="card-body" id="assetsPie" style="width: 500px;height:300px;">
+                    <script src="{% static 'lazy_board_pieAnalys.js' %}"></script>
+                </div>
+            </div>
+            
+        </div>
+        <script src="{% static 'getdata.js' %}"></script>       
+     </div>
+ </div>
+
+{% endblock  %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2></h2>
+    <form action="" method="POST" name="form1" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>Debt</div>
+        <div>
+            <div>Date：<input  id="date" name="date" ></div>
+            <div>Assets or Debt：
+                <select id="assets_debt" name="assets_debt">
+                    <option value="assets">assets</option>
+                    <option value="debt">debt</option>
+                </select>
+            </div>
+            <div>Type：<input  id="account_type" name="account_type" ></div>
+            <div>Account：<input  id="account" name="account" ></div>
+            <div>TWD exchange：<input  id="TWD_exchange" name="TWD_exchange" ></div>
+            <div>Debt QTY：<input  id="debt_QTY" name="debt_QTY" ></div>
+        </div>
+        
+        <input type="submit" name="button" id="botton" value="Summit">
+    </form>
+    <div>Debt table</div>
+    <div class="table-responsive">
+        {% load render_table from django_tables2 %}
+        {% render_table table %}
+    </div>
+
+{% endblock  %}

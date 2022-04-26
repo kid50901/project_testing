@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2></h2>
+    <form action="" method="POST" name="form1" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>Assets delete</div>
+        <div>
+            <div>ID：<input  id="ID" name="ID" ></div>
+        </div>
+        
+        <input type="submit" name="button" id="botton" value="Summit">
+    </form>
+    <div>Assets table</div>
+    <div class="table-responsive">
+        {% load render_table from django_tables2 %}
+        {% render_table table %}
+    </div>
+{% endblock  %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2></h2>
+    <form action="" method="POST" name="form1" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>Income create</div>
+        <div>
+            <div>Date：<input  id="date" name="date" ></div>
+            <div>Type：<input  id="income_type" name="income_type" ></div>
+            <div>TWD exchange：<input  id="TWD_exchange" name="TWD_exchange" ></div>
+            <div>Income QTY：<input  id="income_QTY" name="income_QTY" ></div>
+        </div>
+        
+        <input type="submit" name="button" id="botton" value="Summit">
+    </form>
+    <div>Income table</div>
+    <div class="table-responsive">
+        {% load render_table from django_tables2 %}
+        {% render_table table %}
+    </div>
+{% endblock  %}
